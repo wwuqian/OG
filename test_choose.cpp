@@ -419,3 +419,85 @@ using namespace std;
 //	}
 //	return -1;
 //}
+
+//20.不创建临时变量，实现两个数的交换
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	a = a ^ b;
+//	b = a ^ b;
+//	a = a ^ b;
+//	printf("a=%d b=%d\n",a,b);
+//	return 0;
+//}
+
+//21.sizeof和数组
+//#include <stdio.h> 
+//void test1(int arr[]) 
+//{     
+//	printf("%d\n", sizeof(arr));//(2) 4
+//} 
+//void test2(char ch[]) 
+//{     
+//	printf("%d\n", sizeof(ch));//(4) 4
+//} 
+//int main() 
+//{     
+//	int arr[10] = {0};     
+//	char ch[10] = {0};     
+//	printf("%d\n", sizeof(arr));//(1)  40   
+//	printf("%d\n", sizeof(ch));//(3)  10   
+//	test1(arr);     
+//	test2(ch);     
+//	return 0; 
+//}
+
+//22.逻辑与和逻辑或的特点
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0,a=1,b=2,c=3,d=4;
+//	//i = a++ && ++b && d++;
+//	//printf("a=%d,b=%d,c=%d,d=%d\n",a,b,c,d);//2 3 3 5
+//	i = a++ || ++b || d++;
+//	printf("a=%d,b=%d,c=%d,d=%d\n",a,b,c,d);//2 2 3 4
+//
+//	return 0;
+//}
+
+//23.
+//#pragma pack(4)
+//#include<stdio.h>
+//#include<iostream>
+//using namespace std;
+//struct data
+//{
+//	int value;
+//	double d;
+//	char ch;
+//};
+////对齐数=min（最大的成员变量，默认对齐数）
+//typedef struct list_t{
+//	struct list_t* next;
+//	struct list_t* prev;
+//	char data[0];
+//}list_t;
+//
+//int main()
+//{
+//	cout << sizeof(data) << endl;
+//	//printf("%d\n",sizeof(list_t)); //8
+//	return 0;
+//}
+
+//24.
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	char str[] = "S\065AB";
+//	cout << sizeof(str) << endl;
+//	return 0;
+//}
